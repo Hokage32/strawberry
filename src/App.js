@@ -5,7 +5,7 @@ import Home from './screens/Home';
 import Games from './screens/Games';
 import MyGames from './screens/MyGames';
 import Header from './components/Header';
-import Auth from './components/Auth';
+import Auth from './screens/Auth';
 import { useState } from 'react';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   return (
     <div className="App">
-      <Header auth={isAuthenticated}/>
+      {isAuthenticated ? <Header/> : null}
       <Routes>
         <Route path='/auth' element={!isAuthenticated ? <Auth/> : <Navigate to={"/"}/>}/>
         <Route path='/' element={isAuthenticated ? <Home/> : <Navigate to={"/auth"}/>}/>

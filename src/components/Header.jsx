@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = ({auth}) => {
+const Header = () => {
   return (
     <header>
         <h1>Strawberry</h1>
         <nav>
 
             <Link to={"/"}>
-            {auth ? <button className='btn'>Home</button> : null}
+            <button className='btn'>Home</button>
             </Link>
 
             <Link to={"/games"}>
-            {auth ? <button className='btn'>Games</button> : null}
+            <button className='btn'>Games</button>
             </Link>
 
             <Link to={"/mygames"}>
-            {auth ? <button className='btn'>My Games</button> : null}
+            <button className='btn'>My Games</button>
             </Link>
 
         </nav>
