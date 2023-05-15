@@ -2,6 +2,7 @@ import React from 'react'
 import Spline from '@splinetool/react-spline';
 import { useState, useContext } from 'react';
 import axios from 'axios';
+import GlobalState from '../state/GlobalState';
 
 
 const Auth = () => {
@@ -9,6 +10,7 @@ const Auth = () => {
   const [password, setPassword] = useState('')
   const [register, setRegister] = useState(true)
 
+  const {state, dispatch} = useContext(GlobalState)
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -22,10 +24,12 @@ const Auth = () => {
     .post(register ? "http://localhost:4545/register" : "http://localhost:4545/login", myBod)
     .then((res) => {
       console.log(res.data)
+      {!register ? dispatch({type: "LOGIN", payload: res.data}) : console.log(res.data)}
     })
     .catch((err) => {
       console.log(err)
     })
+    
     
     
   }

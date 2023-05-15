@@ -6,7 +6,7 @@ const app = express()
 const {sequelize} = require("./util/database")
 const {User} = require("./models/user")
 const {Games} = require("./models/games")
-const {register} = require("./controller/Authentication")
+const {register,login} = require("./controller/Authentication")
 
 app.use(express.json())
 app.use(cors())
@@ -16,7 +16,7 @@ Games.belongsTo(User)
 
 
 app.post("/register", register)
-app.post("/login")
+app.post("/login",login)
 
 
 

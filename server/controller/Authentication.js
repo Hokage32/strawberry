@@ -17,7 +17,7 @@ module.exports = {
                 const hash = bcrypt.hashSync(password, salt)
 
                 let newUser = await User.create({username: username, hashedPass: hash})
-
+                res.status(200).send(newUser)
             }
 
         }
@@ -26,7 +26,30 @@ module.exports = {
 
         }
 
-    }
+    },
 
+    login: async (req, res) => {
+        try{
+            const {username, password} = req.body
+
+            let foundUser = await User.findOne({where: {username: username}})
+
+            if(foundUser){
+                const isAuth = bcrypt.compareSync(password, foundUser.hashedPass)
+                
+                if(isAuth){
+                    res.status(200).send(foundUser)
+                }else{
+                    console.log("cant log in")
+                }
+            }else{
+                console.log("cant log in")
+            }
+        }
+        catch{
+
+        }
+
+    }
 
 }
