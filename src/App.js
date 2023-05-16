@@ -14,7 +14,7 @@ function App() {
 
   const {state: {isAuthorized}} = useContext(GlobalState)
   
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  
   return (
     <div className="App">
       {isAuthorized ? <Header/> : null}

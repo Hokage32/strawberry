@@ -46,7 +46,8 @@ module.exports = {
                 console.log("cant log in")
             }
         }
-        catch{
+        catch(err){
+            console.error(err)
 
         }
 

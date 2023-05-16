@@ -5,6 +5,7 @@ import axios from 'axios';
 import GlobalState from '../state/GlobalState';
 
 
+
 const Auth = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -37,6 +38,12 @@ const Auth = () => {
   return (
 
     <main>
+      <div className='strawb'>
+
+    <Spline  scene="https://prod.spline.design/mlbBpgm4Cm7CFXHx/scene.splinecode"/>
+  
+      </div>
+      
       <h1>Welcome to Strawberry!</h1>
       <form className='auth-form' onSubmit={submitHandler}>
         <input 

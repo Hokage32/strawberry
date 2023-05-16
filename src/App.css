@@ -1,9 +1,37 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body{
-  background-color: #100F10 ;
+  background-color: #000000 ;
   color: whitesmoke;
 }
 
-.glob{
-  height: 100vh;
+header{
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+nav{
+  display: flex;
+  margin-top: 35px;
+  margin-right: 50px;
+  gap: 20px;
+}
+.strawb{
+  height: 600px;
+  width: 600px;
+}
+
+auth-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: 100vw;
+  
 }
