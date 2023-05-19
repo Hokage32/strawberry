@@ -1,37 +1,144 @@
-*{
+/* *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 body{
-  background-color: #000000 ;
-  color: whitesmoke;
+  background-image: url('cool-background.png');
+  color: rgb(243, 239, 239);
 }
 
 header{
   display: flex;
-  justify-content: space-between;
+  
+  margin: 1rem;
   
   
 }
+
 nav{
   display: flex;
-  margin-top: 35px;
-  margin-right: 50px;
+  margin: 1rem;
+  
   gap: 20px;
 }
 .strawb{
-  height: 600px;
-  width: 600px;
+  height: 800px;
+  width: 900px;
 }
 
-auth-form{
+.auth-form{
+  text-align: center;
+  border: 1px solid #c9e3eb;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+	margin: 25px;
+	box-shadow: 5px 5px 20px #171717;
+  
+}
+.auth-input{
+  background: transparent;
+  border: 1px solid #c9e3eb;
+  margin-bottom: 5px;
+}
+.register-login{
+  display: flex;
+  justify-content: center;
+}
+
+.login-page{
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+}
+
+
+
+.add-btn{
+  width:100px;
+  height:30px;
+  border-radius:10px;
+  margin: 1rem;
+}
+.goplus{
+  height: 30px;
+  width: 15px;
+}
+
+button{
+  position: relative;
+  border: none;
+  transition: .4s ease-in;
+  z-index: 1;
+  border-radius: 3px;
+  height: 20px;
+  width: 75px;
+}
+button::before,
+button ::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+
+.add-btn:hover{
+  box-shadow: inset -10.5em 0 0 0 #f800eb, inset 10.5em 000 #ff96ad;
+}
+.game-container{
+  display: flex;
+  
+  
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+  
+ 
+  width: 100%;
+  
+  
+  gap: 10px;
+  
+  
+}
+
+.game-card img{
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  
+ 
+}
+.game-card{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 300px;
-  width: 100vw;
   
+  width: 400px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgb(7, 2, 67);
+  
+  
+  color: rgb(226, 221, 235);
+  background-color: rgb(95, 93, 91);
+  border-radius: 20px;
+  
+  
+  
+}
+
+.metacritic-good{
+  
+	color: #00e63d;
+}
+.metacritic-okay{
+ color: rgb(232, 232, 14);
+}
+
+.metacritic-bad{
+  color: red;
+
 }

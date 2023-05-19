@@ -4,12 +4,12 @@ import GamesCard from './GamesCard'
 const GamesBoard = ({games}) => {
 
     const gamesDisplay = games.map((g,i) => {
-        return <GamesCard games={g} />
+        return <GamesCard games={g} key={g.id}/>
     })
 
 
   return (
-    <div>
+    <div className='game-container'>
         {gamesDisplay}
     </div>
   )

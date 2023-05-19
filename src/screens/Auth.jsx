@@ -37,18 +37,20 @@ const Auth = () => {
 
   return (
 
-    <main>
+    <main className='login-page'>
       <div className='strawb'>
 
-    <Spline  scene="https://prod.spline.design/mlbBpgm4Cm7CFXHx/scene.splinecode"/>
+    <Spline  scene="https://prod.spline.design/nQ9w4LjEuTNIGpr5/scene.splinecode"/>
   
       </div>
       
-      <h1>Welcome to Strawberry!</h1>
+      <div>
       <form className='auth-form' onSubmit={submitHandler}>
+        <h1>Welcome to Strawberry!</h1>
         <input 
         type="text" 
         placeholder='Username'
+        className='auth-input'
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         
@@ -56,20 +58,22 @@ const Auth = () => {
         <input 
         type="text"
         placeholder='Password'
+        className='auth-input'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         
         />
-        <button>{register ? "Sign up" : "Login"}</button>
+        <button>{register ? "Register" : "Login"}</button>
 
 
+    
 
 
       </form>
-
-      <button onClick={() => {setRegister(!register)}}>{!register ? "New Strawberry?" : "Login?"} </button>
-
-
+      <div className='register-login'>
+      <button onClick={() => {setRegister(!register)}}>{!register ? "Sign up?" : "Login?"} </button>
+     </div> 
+</div>
 
 
     </main>
