@@ -5,6 +5,7 @@ import Home from './screens/Home';
 import Games from './screens/Games';
 import MyGames from './screens/MyGames';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Auth from './screens/Auth';
 import { useState, useContext } from 'react';
 import GlobalState from './state/GlobalState';
@@ -26,6 +27,7 @@ function App() {
 
 
       </Routes>
+      
      
     </div>
   );

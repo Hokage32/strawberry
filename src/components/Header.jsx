@@ -14,7 +14,7 @@ const Header = () => {
     <header>
         
         <nav>
-
+            <h1>Strawberry</h1>
             <Link to={"/"}>
             <button className='btn'>Home</button>
             </Link>
@@ -27,10 +27,12 @@ const Header = () => {
             <button className='btn'>Playlist</button>
             </Link>
 
-            <button onClick={handleLogout}>Logout</button>
+            
 
         </nav>
-
+        <div className='logout'>
+          <button onClick={handleLogout}>Logout</button>
+        </div>  
     </header>
   )
 }

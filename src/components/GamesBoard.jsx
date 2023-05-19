@@ -1,9 +1,12 @@
 import React from 'react'
 import GamesCard from './GamesCard'
 
-const GamesBoard = ({games}) => {
 
-    const gamesDisplay = games.map((g,i) => {
+const GamesBoard = ({games,}) => {
+
+    const gamesDisplay = games
+    
+    .map((g,i) => {
         return <GamesCard games={g} key={g.id}/>
     })
 
