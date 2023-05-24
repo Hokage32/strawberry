@@ -23,7 +23,7 @@ const Header = () => {
             <button className='btn'>All Games</button>
             </Link>
 
-            <Link to={"/mygames"}>
+            <Link to={"/playlist"}>
             <button className='btn'>Playlist</button>
             </Link>
 

@@ -11,9 +11,9 @@ module.exports = {
                     allowNull:false,
                     primaryKey:true
                 },
-                title: DataTypes.STRING,
-                rating: DataTypes.STRING,
-                isRealeased: DataTypes.BOOLEAN
+                game_id: DataTypes.INTEGER
+                
+                
         
             })
 }

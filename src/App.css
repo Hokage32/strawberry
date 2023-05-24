@@ -13,7 +13,9 @@ header{
   display: flex;
   
   justify-content: space-between;
-  background-color: rgb(95, 93, 91);
+  background-color: transparent;
+  border-bottom: 1px solid;
+  color: rgb(0, 255, 195);
 }
 
 
@@ -45,7 +47,8 @@ nav{
 }
 .auth-input{
   background: transparent;
-  border: 1px solid #c9e3eb;
+  border: none;
+  border-bottom: 1px solid #c9e3eb;
   margin-bottom: 5px;
 }
 .register-login{
@@ -73,7 +76,7 @@ nav{
 }
 .add-about{
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-end;
   gap: 5px;
   margin-right: 7px;
@@ -81,13 +84,18 @@ nav{
   
 }
 
-.search-bar{
+.search-bar-container{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 1rem;
-  margin-right: 125px;
+  width: 100%;
   height: 25px;
-  
+}
+
+.search-bar{
+  border-radius: 6px;
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 button{
@@ -95,7 +103,7 @@ button{
   border: none;
   transition: .4s ease-in;
   z-index: 1;
-  border-radius: 3px;
+  border-radius: 6px;
   height: 20px;
   width: 75px;
 }
@@ -104,11 +112,39 @@ button ::after{
   position: absolute;
   content: "";
   z-index: -1;
+  
+}
+
+.add-btn{
+  width: 35px;
+  height: 25px;
+  border-radius: 10px;
+  
+
+}
+.add-btn:hover{
+  box-shadow: inset -10.5em 0 0 0 #07f8b4, inset 10.5em 000 #e5eb3d;
+
+}
+
+.card-btn{
+  width: 70px;
+  height: 25px;
 }
 
 .card-btn:hover{
-  box-shadow: inset -10.5em 0 0 0 #67f807, inset 10.5em 000 #e5eb3d;
+  box-shadow: inset -10.5em 0 0 0 #07f8b4, inset 10.5em 000 #e5eb3d;
 }
+.delete-btn{
+  width: 35px;
+  height: 25px;
+}
+.delete-btn:hover{
+  box-shadow: inset -10.5em 0 0 0 #ff0000, inset 10.5em 000 #e5eb3d;
+  
+}
+
+
 .game-container{
   display: flex;
   flex-wrap: wrap;
@@ -130,7 +166,7 @@ button ::after{
   box-sizing: border-box;
   box-shadow: 0px 3px 10px rgb(7, 2, 67);
   color: rgb(226, 221, 235);
-  background-color: rgb(95, 93, 91);
+  background-color: rgb(34, 104, 83);
   border-radius: 20px;
 }
 
@@ -151,4 +187,36 @@ button ::after{
 
 .metacritic-bad{
   color: red
+}
+
+.glob{
+  width: 100vw;
+  height: 100vh;
+}
+
+.about-page{
+  display: flex;
+}
+.about-img{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+margin: 1rem;
+
+}
+
+.main-img{
+  width: 800px;
+  border-radius: 15px;
+}
+.screenshot{
+  width: 500px;
+  border-radius: 15px;
+}
+
+.about-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
 }
