@@ -5,8 +5,9 @@
 }
 
 body{
-  background-image: url('cool-background.png');
-  color: rgb(243, 239, 239);
+  
+  background: url('cool-background.png');
+  color: rgb(255, 255, 255);
 }
 
 header{
@@ -54,6 +55,9 @@ nav{
 .register-login{
   display: flex;
   justify-content: center;
+}
+.reg-btn{
+  margin: 1rem;
 }
 
 .login-page{
@@ -178,15 +182,38 @@ button ::after{
   border-radius: 3px;
 }
 
+.metacritic-package{
+  display: flex;
+  gap: 5px;
+}
+.meta-box{
+  
+  height: 30px;
+  width: 32px;
+  background-color: rgba(5, 5, 5, 0.659);
+  border-radius: 15px;
+  
+  
+
+}
+
 .metacritic-good{
-	color: #00e63d;
+  display: flex;
+	color: #00ff15;
+  
+  
+
+
 }
 .metacritic-okay{
  color: rgb(232, 232, 14);
+ 
+
 }
 
 .metacritic-bad{
-  color: red
+  color: red;
+  
 }
 
 .glob{
@@ -218,5 +245,22 @@ margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem;
+ margin: 1rem;
+  background-color: rgba(5, 5, 5, 0.185);
+  border-radius: 15px;
+  
+  
+}
+
+.description{
+  width: 600px;
+  background-color: rgba(5, 5, 5, 0.185);
+  border-radius: 15px;
+ margin: 1rem;
+}
+
+.svg{
+  width: 40px;
+  height: 30px;
+  
 }

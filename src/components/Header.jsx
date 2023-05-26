@@ -2,7 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import GlobalState from '../state/GlobalState'
 import { useContext } from 'react'
-import Strawberry from '../images/Strawberry.png'
+import bookmark from '../images/bookmark.svg'
+import roof from '../images/roof.svg'
+import controller from '../images/controller.svg'
+import logout from '../images/logout.svg'
+import { motion } from 'framer-motion'
 
 const Header = () => {
   const {state, dispatch} = useContext(GlobalState)
@@ -16,22 +20,22 @@ const Header = () => {
         <nav>
             <h1>Strawberry</h1>
             <Link to={"/"}>
-            <button className='btn'>Home</button>
+            <motion.img whileHover={{scale:1.2}} className='svg' src={roof} alt="" />
             </Link>
 
             <Link to={"/games"}>
-            <button className='btn'>All Games</button>
+            <motion.img whileHover={{scale:1.2}} className='svg' src={controller} alt="" />
             </Link>
 
             <Link to={"/playlist"}>
-            <button className='btn'>Playlist</button>
+            <motion.img whileHover={{scale:1.2}} className='svg' src={bookmark} alt="" />
             </Link>
 
             
 
         </nav>
         <div className='logout'>
-          <button onClick={handleLogout}>Logout</button>
+          <motion.img whileHover={{scale:1.2}} onClick={handleLogout} className='svg' src={logout}/>
         </div>  
     </header>
   )

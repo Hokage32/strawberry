@@ -63,7 +63,7 @@ const Auth = () => {
         onChange={(e) => setPassword(e.target.value)}
         
         />
-        <button>{register ? "Register" : "Login"}</button>
+        <button className='reg-btn'>{register ? "Register" : "Login"}</button>
 
 
     
