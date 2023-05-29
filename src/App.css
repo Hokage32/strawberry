@@ -1,13 +1,14 @@
 *{
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  
 }
 
 body{
   
   background: url('cool-background.png');
   color: rgb(255, 255, 255);
+  padding: 50px;
 }
 
 header{
@@ -44,6 +45,7 @@ nav{
   align-items: center;
 	margin: 25px;
 	box-shadow: 5px 5px 20px #171717;
+  padding: 50px;
   
 }
 .auth-input{
@@ -51,10 +53,12 @@ nav{
   border: none;
   border-bottom: 1px solid #c9e3eb;
   margin-bottom: 5px;
+  
 }
 .register-login{
   display: flex;
   justify-content: center;
+  
 }
 .reg-btn{
   margin: 1rem;
@@ -166,12 +170,15 @@ button ::after{
 .game-card{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
   width: 400px;
   box-sizing: border-box;
-  box-shadow: 0px 3px 10px rgb(7, 2, 67);
-  color: rgb(226, 221, 235);
-  background-color: rgb(34, 104, 83);
+  box-shadow: 0px 3px 10px rgb(19, 17, 37);
+  color: rgb(0, 0, 0);
+  background : rgb(21, 208, 167);
   border-radius: 20px;
+  
 }
 
 .next-prev{
@@ -233,8 +240,13 @@ margin: 1rem;
 }
 
 .main-img{
-  width: 800px;
+  width: 1200px;
   border-radius: 15px;
+}
+.screenshot-box{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
 .screenshot{
   width: 500px;
@@ -263,4 +275,68 @@ margin: 1rem;
   width: 40px;
   height: 30px;
   
+}
+
+.mission{
+  text-align: center;
+  margin: 1rem;
+  background-color:rgba(5, 5, 5, 0.185);
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.inner-inner-carousel{
+  min-height: 40rem;
+  min-width: 800px;
+  padding: 20px
+}
+
+.home-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgb(19, 17, 37);
+  color: rgb(0, 0, 0);
+  background-color: rgb(21, 208, 167);
+  border-radius: 20px;
+  
+
+}
+
+.home-card-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.inner-carousel{
+  display: flex;
+  
+  width: 800px;
+  height: 600px;
+  
+  
+}
+
+.carousel{
+  cursor: grab;
+  overflow: hidden;
+ 
+  width: 1000px;
+  height: 800px;
+  
+}
+
+.carousel-box{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  ;
+  background-color:rgba(5, 5, 5, 0.185);
+  width: 1000px;
+  border-radius: 25px;
 }

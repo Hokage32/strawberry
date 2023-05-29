@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route,Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import Home from './screens/Home';
+import Home from '../src/screens/HomePage/Home'
 import Games from './screens/Games';
 import Playlist from './screens/Playlist';
 import Header from './components/Header';

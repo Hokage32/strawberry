@@ -29,7 +29,7 @@ const navigate = useNavigate()
         <img src={games.background_image} alt="" />
         <h5></h5>
         <h1>{games.name}</h1>
-        <h4>Genre: {games.genres[0]?.name} {games.genres[1]?.name}</h4>
+        <h4>Genre: {games.genres[0]?.name} | {games.genres[1]?.name}</h4>
        
         <h4 className={games.metacritic > 70 ? 'metacritic-good' : games.metacritic <= 70 ? 'metacritic-okay' : 'metacritic-bad'}>{games.metacritic}</h4>
        

@@ -18,7 +18,7 @@ const Playlist = () => {
     .then((res) => {
       console.log(res.data)
       let urls = res.data.map((g,i) => {
-        return `https://api.rawg.io/api/games/${g.game_id}?key=13a71fe2f7e94906b61a7e1a357e0f8b`
+        return `https://api.rawg.io/api/games/${g.game_id}?key=c9278b30be764ecbabed3201d20a4a65`
       })
       setUrls(urls)
       setIsLoading(false)
@@ -38,18 +38,7 @@ const remove = (index) => {
   useEffect(() => {
     
     settingUrl()
-  //  axios
-  //   .get(`http://localhost:4545/api/getUserGames/${state.userId}`)
-  //   .then((res) => {
-  //     console.log(res.data)
-  //     let urls = res.data.map((g,i) => {
-  //       return `https://api.rawg.io/api/games/${g.game_id}?key=13a71fe2f7e94906b61a7e1a357e0f8b`
-  //     })
-  //     setUrls(urls)
-  //     setIsLoading(false)
-
-  //   })
-  //   .catch(err => console.log(err))
+ 
 
   },[])
 
@@ -68,16 +57,7 @@ const remove = (index) => {
   useEffect(() => {
     setIsLoading(true)
     settingGames()
-    // if(urls.length !== 0){
-    //   axios.all(urls.map((u, i) => axios.get(u)))
-    //   .then((res) => {
-        
-    //     let newState = res.map((r,i) => r.data)
-    //     console.log(newState)
-    //     setUserGames(newState)
-    //     setIsLoading(false)
-    //   })
-    // }
+    
   }, [urls])
 
   

@@ -12,7 +12,7 @@ const About = () => {
 
     useEffect(()=> {
         axios
-        .get(`https://api.rawg.io/api/games/${id}?key=13a71fe2f7e94906b61a7e1a357e0f8b`)
+        .get(`https://api.rawg.io/api/games/${id}?key=c9278b30be764ecbabed3201d20a4a65`)
         .then((res) => {
           console.log(res.data)
           setGame(res.data)
@@ -22,20 +22,22 @@ const About = () => {
 
       useEffect(()=> {
         axios
-        .get(`https://api.rawg.io/api/games/${game.slug}/screenshots?key=13a71fe2f7e94906b61a7e1a357e0f8b`)
+        .get(`https://api.rawg.io/api/games/${game.slug}/screenshots?key=c9278b30be764ecbabed3201d20a4a65`)
         .then((res) => {
-         
+          console.log(res.data.results)
           setScreenshot(res.data.results)
         })
-      })
+      }, [])
       
      
 
   return (
     <div className='about-page'>
     <div className='about-img'>
+      
         <img className='main-img' src={game.background_image} alt="" />
-        <div >
+        
+        <div className='screenshot-box'>
           {screenshot.map((s)=> {
             return <img className='screenshot' src={s.image} alt="" />
           })}

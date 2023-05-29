@@ -13,7 +13,7 @@ const Games = () => {
   const [page, setPage] = useState(1)
   const [search, setSearch] = useState("")
   const [emptySearch, setEmptySearch] = useState(true)
-   useEffect(() => {
+   useEffect(  () => {
    
   {emptySearch 
     
@@ -21,7 +21,7 @@ const Games = () => {
  
     axios
     
-    .get(`https://api.rawg.io/api/games?key=13a71fe2f7e94906b61a7e1a357e0f8b&page_size=40&page=${page}`)
+    .get(`https://api.rawg.io/api/games?key=c9278b30be764ecbabed3201d20a4a65&page_size=40&page=${page}`)
     .then((res) => {
       console.log(res.data.results)
       setGames(res.data.results)
@@ -32,7 +32,7 @@ const Games = () => {
   
     setTimeout(() => {
       axios
-    .get(`https://api.rawg.io/api/games?key=13a71fe2f7e94906b61a7e1a357e0f8b&search=${search}`)
+    .get(`https://api.rawg.io/api/games?key=c9278b30be764ecbabed3201d20a4a65&search=${search}`)
     .then((res) => {
       console.log(res.data.results)
       setGames(res.data.results)
