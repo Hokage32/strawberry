@@ -5,7 +5,7 @@ import Home from '../src/screens/HomePage/Home'
 import Games from './screens/Games';
 import Playlist from './screens/Playlist';
 import Header from './components/Header';
-
+import Footer from './components/Footer';
 import Auth from './screens/Auth';
 import About from './screens/About';
 import { useState, useContext } from 'react';
@@ -26,10 +26,8 @@ function App() {
         <Route path='/games' element={isAuthorized ? <Games/> : <Navigate to={"/auth"}/>}/>  
         <Route path='/playlist' element={isAuthorized ? <Playlist/> : <Navigate to={"/auth"}/>}/>
         <Route path="/about/:id" element={<About/>}/>
-
-
-
       </Routes>
+      <Footer/>
       
      
     </div>

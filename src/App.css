@@ -1,13 +1,28 @@
 *{
-  box-sizing: border-box;
-  margin: 0;
   
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body{
-  
   background: url('cool-background.png');
   color: rgb(255, 255, 255);
+}
+footer{
+  
+  margin-top: auto;
+  height: 50px;
+}
+
+.footer-stuff{
+  height: 50px;
+  text-align: center;
+  background-color: rgb(69, 67, 67);
   padding: 50px;
 }
 
@@ -75,7 +90,8 @@ nav{
 .card-btn{
   width:100px;
   height:30px;
-  border-radius:10px;
+  border-radius:100px;
+  font-weight: bold;
   
 }
 .goplus{
@@ -103,7 +119,8 @@ nav{
 .search-bar{
   border-radius: 6px;
   border: none;
-  border-bottom: 1px solid black;
+  box-shadow: 0px 3px 10px rgb(19, 17, 37);
+  
 }
 
 button{
@@ -111,7 +128,7 @@ button{
   border: none;
   transition: .4s ease-in;
   z-index: 1;
-  border-radius: 6px;
+  border-radius: 100px;
   height: 20px;
   width: 75px;
 }
@@ -126,7 +143,7 @@ button ::after{
 .add-btn{
   width: 35px;
   height: 25px;
-  border-radius: 10px;
+  border-radius: 100px;
   
 
 }
@@ -171,6 +188,7 @@ button ::after{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 10px;
   width: 400px;
   box-sizing: border-box;
@@ -198,7 +216,8 @@ button ::after{
   height: 30px;
   width: 32px;
   background-color: rgba(5, 5, 5, 0.659);
-  border-radius: 15px;
+  border-radius: 100px;
+  padding: 5px;
   
   
 
@@ -243,23 +262,17 @@ margin: 1rem;
   width: 1200px;
   border-radius: 15px;
 }
-.screenshot-box{
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-.screenshot{
-  width: 500px;
-  border-radius: 15px;
-}
+
 
 .about-info{
   display: flex;
   flex-direction: column;
   justify-content: center;
- margin: 1rem;
+  margin: 1rem;
   background-color: rgba(5, 5, 5, 0.185);
   border-radius: 15px;
+  padding: 25px;
+  gap: 10px;
   
   
 }
@@ -268,7 +281,8 @@ margin: 1rem;
   width: 600px;
   background-color: rgba(5, 5, 5, 0.185);
   border-radius: 15px;
- margin: 1rem;
+  margin: 1rem;
+  padding: 25px;
 }
 
 .svg{
@@ -302,8 +316,6 @@ margin: 1rem;
   color: rgb(0, 0, 0);
   background-color: rgb(21, 208, 167);
   border-radius: 20px;
-  
-
 }
 
 .home-card-img{
@@ -325,18 +337,46 @@ margin: 1rem;
 .carousel{
   cursor: grab;
   overflow: hidden;
- 
-  width: 1000px;
-  height: 800px;
-  
+  width: 1300px;
+  height: 800px; 
 }
 
 .carousel-box{
   display: flex;
   justify-content: center;
   margin: 1rem;
-  ;
   background-color:rgba(5, 5, 5, 0.185);
-  width: 1000px;
+  width: 1500px;
   border-radius: 25px;
+}
+
+.screenshot-inner-inner{
+  min-height: 20rem;
+  min-width: 30rem;
+}
+
+.screenshot-box{
+  display: flex;
+ 
+  gap: 10px;
+  margin-top: 20px;
+}
+.screenshot{
+  
+  width: 100%;
+  border-radius: 15px;
+}
+
+.screenshot-inner{
+  display: flex;
+  
+  height: 300px;
+  background-color: lightblue;
+  gap: 25px;
+}
+
+.screenshot-carousel{
+  cursor: grab;
+  overflow: hidden;
+  width: 1200px;
 }

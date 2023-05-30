@@ -8,7 +8,8 @@ import {motion} from 'framer-motion'
 const Home = () => {
 const {state} = useContext(GlobalState)
 const [popularGames, setPopularGames] = useState([])
-const [width, setWidth] = useState(0)
+const [newGames, setNewGames] = useState([])
+
 const carousel = useRef()
 
 const popular = async () => {
@@ -20,12 +21,19 @@ const popular = async () => {
   })
 }
 
-useEffect(()=> {
-  setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-},[])
+// const newGame = async () => {
+//   await 
+// }
+
 
 useEffect(()=> {
   popular()
+  axios
+  .get('https://api.rawg.io/api/games?key=c9278b30be764ecbabed3201d20a4a65&dates=2023-01-01,2023-12-30&ordering=-added&page_size=20')
+  .then((response) => {
+    console.log(response.data.results)
+    setNewGames(response.data.results)
+  })
 },[])
   return (
     <div>
@@ -39,7 +47,7 @@ useEffect(()=> {
     <h2>Popular in 2022</h2>
     <div className='carousel-box'>
     <motion.div ref={carousel} className='carousel'>
-      <motion.div drag='x'dragConstraints={{right:0, left: -15100}} className='inner-carousel' >
+      <motion.div drag='x'dragConstraints={{right:0, left: -15500}} className='inner-carousel' >
         {popularGames.map((popular) => {
           return (
             <motion.div className='inner-inner-carousel'>
@@ -53,7 +61,7 @@ useEffect(()=> {
 </div>
     <h2>New and Upcoming</h2>
 
-    <h2>Highest Rated</h2>
+   
     </div>
   )
 }

@@ -35,8 +35,8 @@ const navigate = useNavigate()
        
 
         <div className='add-about' >
-            <button className='card-btn' onClick={handleClick}>About</button>
-            <button  className='add-btn' onClick={addToPlaylist} ><GoPlus size={15}/></button>
+            <motion.button whileTap={{ rotate: 90, scale: 0.75 }} className='card-btn' onClick={handleClick}>About</motion.button>
+            <motion.button whileTap={{ rotate: 90, scale: 0.75 }} className='add-btn' onClick={addToPlaylist} ><GoPlus size={15}/></motion.button>
             
         </div>
 
