@@ -75,7 +75,7 @@ const Games = () => {
       <GamesBoard games={games} />
 
       <div  className='next-prev'>
-      <motion.button whileHover={{scale:1.2}} whileTap={{scale:1}} onClick={page !== 1 ? decrement : null}>Previous</motion.button> 
+      {page === 1 ? null : <motion.button whileHover={{scale:1.2}} whileTap={{scale:1}} onClick={page !== 1 ? decrement : null}>Previous</motion.button> }
       <motion.button whileHover={{scale:1.2}} whileTap={{scale:1}} onClick={increment}>Next</motion.button>
       </div>
     </div>

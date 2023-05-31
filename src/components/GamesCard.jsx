@@ -1,14 +1,16 @@
 import React from 'react'
 import {GoPlus} from 'react-icons/go'
+import {RiCheckFill} from 'react-icons/ri'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
 import GlobalState from '../state/GlobalState'
 import axios from 'axios'
 
 const GamesCard = ({games}) => {
 const {state} = useContext(GlobalState)
 const navigate = useNavigate()
+const [clicked, setClicked] = useState(false)
 
   const addToPlaylist = () => {
     axios
@@ -16,7 +18,9 @@ const navigate = useNavigate()
 
     .then((res) => {
       console.log(res.data)
+      setClicked(!clicked)
     })
+
   }
   
 
@@ -36,7 +40,7 @@ const navigate = useNavigate()
 
         <div className='add-about' >
             <motion.button whileTap={{ rotate: 90, scale: 0.75 }} className='card-btn' onClick={handleClick}>About</motion.button>
-            <motion.button whileTap={{ rotate: 90, scale: 0.75 }} className='add-btn' onClick={addToPlaylist} ><GoPlus size={15}/></motion.button>
+            <motion.button  className='add-btn' onClick={addToPlaylist} >{!clicked ? <GoPlus size={15}/> : <RiCheckFill size={15} height={30} width={15} />}</motion.button>
             
         </div>
 

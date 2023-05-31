@@ -13,8 +13,6 @@ const PlaylistCard = ({userGames,settingGames, settingUrl,remove, index}) => {
       axios
       .delete(`http://localhost:4545/api/deleteUserGame/${userGames.id}/${state.userId}`)
       .then((res) => {
-        // settingUrl()
-        // settingGames()
         remove(index)
         console.log(res)
       })
